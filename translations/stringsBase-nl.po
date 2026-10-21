@@ -508,6 +508,11 @@ msgstr "Deze structuur is afgeleid van %ARTIFACT%"
 msgid "Artifacts Summary"
 msgstr "Samenvatting artefacten"
 
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Tabel artefacten"
+
 # Language
 #: Language
 msgid "Language"
@@ -562,3 +567,82 @@ msgstr "Antwoorden voor deze vragenlijst"
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "Er zijn momenteel geen QuestionnaireResponse instanties voor deze vragenlijst gedefinieerd in deze IG."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Formele weergaven van resource-inhoud"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Andere weergaven van de resource:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Voorbeelden voor resource %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Er zijn momenteel geen voorbeelden beschikbaar voor resource %ID%"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "%FMT% resource"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Resource"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Structuur"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Zoekparameters"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Tekstwijzigingen markeren?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Schakel dit in om wijzigingen sinds de laatste officiële release te zien"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Gewijzigde inhoud"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Nieuwe inhoud"
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Huidige build"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of @@@.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Let op: deze zoekopdracht doorzoekt de huidige build van @@@.  Deze pagina bestaat alleen voor de CI-build - gepubliceerde versies gebruiken een andere zoekpagina."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Specificatie"

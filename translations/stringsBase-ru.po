@@ -1,17 +1,40 @@
-# en -> ru
-
-# NO_TRANS
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 07:42+0000\n"
+"PO-Revision-Date: 2025-09-22 10:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: uz_UZ\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
 
 #: NO_TRANS
-msgid "There is no translation page available for the current page, so it has been rendered in the default language"
-msgstr "Для текущей страницы не существует страницы перевода, поэтому она отображается на языке по умолчанию"
+msgid ""
+"There is no translation page available for the current page, so it has been "
+"rendered in the default language"
+msgstr ""
+"Для текущей страницы не существует страницы перевода, поэтому она "
+"отображается на языке по умолчанию"
 
 # TRANS_HLP
 #: TRANS_HLP
-msgid "This page includes translations from the original source language in which the guide was authored.  Information on these translations and instructions on how to provide feedback on the translations can be found [here](translationinfo.html)."
-msgstr "На этой странице представлены переводы с языка оригинала, на котором было написано руководство.  Информацию об этих переводах и инструкции по предоставлению отзывов о переводах можно найти [здесь](translationinfo.html)."
+msgid ""
+"This page includes translations from the original source language in which "
+"the guide was authored.  Information on these translations and instructions "
+"on how to provide feedback on the translations can be found [here]"
+"(translationinfo.html)."
+msgstr ""
+"На этой странице представлены переводы с языка оригинала, на котором было "
+"написано руководство.  Информацию об этих переводах и инструкции по "
+"предоставлению отзывов о переводах можно найти [здесь](translationinfo.html)."
 
 # Experimental
 #: Experimental
@@ -50,8 +73,10 @@ msgstr "История изменений для %ARTIFACT%."
 
 # CodeSystemValuesets
 #: CodeSystemValuesets
-msgid "This Code system is referenced in the definition of the following value sets:"
-msgstr "Эта система кодов упоминается в определении следующих наборов значений:"
+msgid ""
+"This Code system is referenced in the definition of the following value sets:"
+msgstr ""
+"Эта система кодов упоминается в определении следующих наборов значений:"
 
 # Contained
 #: Contained
@@ -70,7 +95,8 @@ msgstr "Формальные представления содержимого �
 
 # ReadingStructures
 #: ReadingStructures
-msgid "Description of Profiles, Differentials, Snapshots, and their representations"
+msgid ""
+"Description of Profiles, Differentials, Snapshots, and their representations"
 msgstr "Описание профилей, дифференциалов, снимков и их представлений"
 
 # KeyElementsTable
@@ -115,11 +141,6 @@ msgstr "Все"
 
 # Derive
 #: Derive
-msgid "This structure is derived from %ARTIFACT%"
-msgstr "Эта структура получена из %ARTIFACT%"
-
-# Derived
-#: Derived
 msgid "This structure is derived from %ARTIFACT%"
 msgstr "Эта структура получена из %ARTIFACT%"
 
@@ -221,7 +242,7 @@ msgstr "%FMT% Профиль"
 # FormatRep
 #: FormatRep
 msgid "%FMT% representation of the %ID% %TYPE%."
-msgstr "%FMT% представление %ID% %TYPE%."
+msgstr "%FMT% представление %ID% %TYPE%"
 
 # Mappings
 #: Mappings
@@ -321,7 +342,7 @@ msgstr "флаг"
 # PrevPage
 #: PrevPage
 msgid "< prev"
-msgstr "< prev"
+msgstr "< Предыдущая"
 
 # NextPage
 #: NextPage
@@ -401,12 +422,12 @@ msgstr "по состоянию на %RESDATE%"
 # Responsible
 #: Responsible
 msgid "Responsible"
-msgstr "Ответственность"
+msgstr "Ответственный"
 
 # Realm
 #: Realm
 msgid "Realm"
-msgstr "Realm"
+msgstr "Юрисдикция"
 
 # ComputableName
 #: ComputableName
@@ -461,7 +482,7 @@ msgstr "Планы испытаний"
 # Actors
 #: Actors
 msgid "Actors"
-msgstr "Актеры"
+msgstr "Участники"
 
 # Diagram
 #: Diagram
@@ -480,8 +501,12 @@ msgstr "Экземпляры"
 
 # WorkInProgress
 #: WorkInProgress
-msgid "The content in this section has not undergone work group review and may be significantly revised prior to the next ballot."
-msgstr "Содержание этого раздела не прошло проверку рабочей группы и может быть существенно пересмотрено до следующего голосования."
+msgid ""
+"The content in this section has not undergone work group review and may be "
+"significantly revised prior to the next ballot."
+msgstr ""
+"Содержание этого раздела не прошло проверку рабочей группы и может быть "
+"существенно пересмотрено до следующего голосования."
 
 # Contents
 #: Contents
@@ -491,22 +516,31 @@ msgstr "Содержание"
 # Globals
 #: Globals
 msgid "Globals"
-msgstr "Globals"
+msgstr "Глобальные профили"
 
 # GlobalProfiles
 #: GlobalProfiles
 msgid "Global Profiles"
-msgstr "Глобальные профили"
+msgstr "Глобальные определения профилей"
 
 # ArtifactsIntro
 #: ArtifactsIntro
-msgid "This page provides a list of the FHIR artifacts defined as part of this implementation guide."
-msgstr "На этой странице представлен список артефактов FHIR, определенных в рамках данного руководства по внедрению."
+msgid ""
+"This page provides a list of the FHIR artifacts defined as part of this "
+"implementation guide."
+msgstr ""
+"На этой странице представлен список артефактов FHIR, определенных в рамках "
+"данного руководства по внедрению."
 
 # ArtifactsSummary
 #: ArtifactsSummary
 msgid "Artifacts Summary"
 msgstr "Краткое описание артефактов"
+
+# ArtifactsTable
+#: ArtifactsTable
+msgid "Artifacts Table"
+msgstr "Таблица артефактов"
 
 # Language
 #: Language
@@ -526,12 +560,12 @@ msgstr "Обязательства"
 # OpenEHR
 #: OpenEHR
 msgid "openEHR View"
-msgstr "openEHR View"
+msgstr "Представление openEHR"
 
 # QuestionnaireTree
 #: QuestionnaireTree
 msgid "Tree view"
-msgstr "Вид на дерево"
+msgstr "Древовидное представление"
 
 # QuestionnaireSample
 #: QuestionnaireSample
@@ -556,9 +590,98 @@ msgstr "Протестируйте этот вопросник"
 # ResponsesQuestionnaire
 #: ResponsesQuestionnaire
 msgid "Responses for this Questionnaire"
-msgstr "Ответы на этот вопросник"
+msgstr "Ответы на этот Опросный лист"
 
 # NoQuestionnaireResponses
 #: NoQuestionnaireResponses
 msgid "There are currently no QuestionnaireResponse instances for this Questionnaire defined in this IG."
 msgstr "В настоящее время в данном ИГ не определено ни одного экземпляра QuestionnaireResponse для этого вопросника."
+
+# FormalResource
+#: FormalResource
+msgid "Formal Views of Resource Content"
+msgstr "Формальные представления содержимого ресурса"
+
+# ResourceOtherReps
+#: ResourceOtherReps
+msgid "Other representations of resource:"
+msgstr "Другие представления ресурса:"
+
+# ExamplesForResource
+#: ExamplesForResource
+msgid "Examples for the %ID% Resource."
+msgstr "Примеры для ресурса %ID%."
+
+# ResourceNoExamples
+#: ResourceNoExamples
+msgid "No examples are currently available for the %ID% Resource"
+msgstr "Примеры для ресурса %ID% пока недоступны"
+
+# FormatResource
+#: FormatResource
+msgid "%FMT% Resource"
+msgstr "Ресурс %FMT%"
+
+# ResourceModel
+#: ResourceModel
+msgid "Resource"
+msgstr "Ресурс"
+
+# ADL
+#: ADL
+msgid "ADL"
+msgstr "ADL"
+
+# Structure
+#: Structure
+msgid "Structure"
+msgstr "Структура"
+
+# SearchParameters
+#: SearchParameters
+msgid "Search Parameters"
+msgstr "Параметры поиска"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Выделять изменения в тексте?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "Включите это, чтобы увидеть изменения с момента последнего официального выпуска"
+
+# HighlightChanges
+#: HighlightChanges
+msgid "Highlight text changes?"
+msgstr "Matn o‘zgarishlarini ajratib ko‘rsatilsinmi?"
+
+# HighlightChangesHelp
+#: HighlightChangesHelp
+msgid "Enable this to see changes since the last official release"
+msgstr "So‘nggi rasmiy relizdan beri kiritilgan o‘zgarishlarni ko‘rish uchun buni yoqing"
+
+# ModifiedContent
+#: ModifiedContent
+msgid "Modified Content"
+msgstr "Изменённое содержание"
+
+# NewContent
+#: NewContent
+msgid "New Content"
+msgstr "Новое содержание"
+# CurrentBuild
+#: CurrentBuild
+msgid "Current Build"
+msgstr "Текущая сборка"
+
+# CISearchMsg
+#: CISearchMsg
+msgid "Note: this search searches the current build of @@@.  This page only exists for the CI build - published versions will use a different search page."
+msgstr "Примечание: этот поиск выполняется по текущей сборке @@@.  Эта страница существует только для CI-сборки - опубликованные версии будут использовать другую страницу поиска."
+
+# Specification
+#: Specification
+msgid "Specification"
+msgstr "Спецификация"

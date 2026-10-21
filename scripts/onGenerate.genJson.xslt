@@ -68,6 +68,16 @@
         <xsl:with-param name="name" select="'fmm-definition'"/>
       </xsl:call-template>
     </xsl:variable>
+    <xsl:variable name="togglechanges">
+      <xsl:call-template name="getBoolean">
+        <xsl:with-param name="property" select="'toggle-changes'"/>
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="oldartifacts">
+      <xsl:call-template name="getBoolean">
+        <xsl:with-param name="property" select="'old-artifacts'"/>
+      </xsl:call-template>
+    </xsl:variable>
     <xsl:value-of select="concat('{&#xa;',
     '  &quot;releaselabel&quot;:&quot;', $releaselabel, '&quot;,&#xa;',
     '  &quot;copyrightyear&quot;:&quot;', $copyrightyear, '&quot;,&#xa;',
@@ -80,6 +90,8 @@
     '  &quot;excludeflags&quot;:&quot;', $excludeflags, '&quot;,&#xa;',
     '  &quot;openehr&quot;:&quot;', $openehr, '&quot;,&#xa;',
     '  &quot;fcpspec&quot;:&quot;', $fcp, '&quot;,&#xa;',
+    '  &quot;togglechanges&quot;:&quot;', $togglechanges, '&quot;,&#xa;',
+    '  &quot;oldartifacts&quot;:&quot;', $oldartifacts, '&quot;,&#xa;',
     '  &quot;fmm-definition&quot;:&quot;', $fmm, '&quot;&#xa;}')"/>
   </xsl:template>
 	<xsl:template name="getParameter">

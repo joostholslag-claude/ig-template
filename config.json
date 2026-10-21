@@ -1,4 +1,5 @@
 {
 	"script": "scripts/ant-openehr.xml",
-	"otherScripts" : []
+	"otherScripts" : [],
+	"template-parameters": ["openehr"]
 }
