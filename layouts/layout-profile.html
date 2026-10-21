@@ -24,13 +24,13 @@
 
 {% include fragment-resourceTable.html lang="{{[lang]}}" %}
 {%if site.data.resources[resource_].description %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].descriptionlang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}{%if site.data.resources[resource_].purpose %}
-<p>
+<div data-fhir="generated">
 {{site.data.resources[resource_].purposelang['{{[lang]}}']|markdownify}}
-</p>
+</div>
 {% endif %}
 
 <!-- insert intro if present -->
@@ -49,6 +49,17 @@
   </p>
   <div id="tabs">
     <ul>
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
+      <li>
+        <a href="#tabs-key">{{site.data.stringsBase['{{[lang]}}']['KeyElementsTable']}}</a>
+      </li>
+{% endunless %}
+      <li>
+        <a href="#tabs-diff">{{site.data.stringsBase['{{[lang]}}']['DifferentialTable']}}</a>
+      </li>
+      <li>
+        <a href="#tabs-snap">{{site.data.stringsBase['{{[lang]}}']['SnapshotTable']}}</a>
+      </li>
 {% if site.data.structuredefinitions["{{[id]}}"].obligations %}
       <li>
         <a href="#tabs-obligations">{{site.data.stringsBase['{{[lang]}}']['Obligations']}}</a>
@@ -68,9 +79,6 @@
         <a href="#tabs-adl">{{site.data.stringsBase['{{[lang]}}']['ADL']}}</a>
       </li>
 {% endif %}
-      <li>
-        <a href="#tabs-snap">{{site.data.stringsBase['{{[lang]}}']['SnapshotTable']}}</a>
-      </li>
 {% endif %}
 {% unless excludexml == 'y' %}
 <!--      <li>
@@ -94,11 +102,69 @@
         <a href="#tabs-all">{{site.data.stringsBase['{{[lang]}}']['AllTables']}}</a>
       </li>
     </ul>
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <div id="tbl-key">
+        <div id="tbl-key-inner">
+          {% include StructureDefinition-{{[id]}}-snapshot-by-key{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-by-key-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-key{{[langsuffix]}}.xhtml %}
+
+          {% capture invariantskey %}
+            {% include StructureDefinition-{{[id]}}-inv-key{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantskey.size <= 218 %}
+            <a name="inv-key"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-key{{[langsuffix]}}.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+    </div>
+{% endunless %}
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      <div id="tbl-diff">
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <div id="tbl-diff-inner">
+          {% include StructureDefinition-{{[id]}}-diff{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
+          <a name="tx"> </a>
+          <!--Terminology Bindings heading in the fragment -->
+          {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff{{[langsuffix]}}.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+    </div>
     <a name="tabs-snap"> </a>
     <div id="tabs-snap">
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot{{[langsuffix]}}.xhtml %}
+
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations{{[langsuffix]}}.xhtml %}
+{% endif %}
+        
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
         
@@ -188,7 +254,7 @@
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
       <div id="tbl-summ">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="tbl-summ-inner">
           <a name="summary"> </a>
           {% include StructureDefinition-{{[id]}}-summary{{[langsuffix]}}.xhtml %}
@@ -197,12 +263,16 @@
     </div>
     <a name="tabs-all"> </a>
     <div id="tabs-all">
+{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}
       <div id="all-tbl-key">
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['KeyElementsView']}}</b>
         </p>
         <div id="all-tbl-key-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-by-key-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-by-key-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-key{{[langsuffix]}}.xhtml %}
         
@@ -217,13 +287,17 @@
           {% endunless%}
         </div>
       </div>
+{% endunless %}
       <div id="all-tbl-diff">
         <p>
           <b>{{site.data.stringsBase['{{[lang]}}']['DifferentialView']}}</b>
         </p>
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-tbl-diff-inner">
           {% include StructureDefinition-{{[id]}}-diff-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-diff-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx-diff{{[langsuffix]}}.xhtml %}
         
@@ -244,6 +318,9 @@
         </p>
         <div id="all-tbl-snap-inner">
           {% include StructureDefinition-{{[id]}}-snapshot-all{{[langsuffix]}}.xhtml %}
+{% if site.data.structuredefinitions["{{[id]}}"].obligations %}
+          {% include StructureDefinition-{{[id]}}-snapshot-obligations-all{{[langsuffix]}}.xhtml %}
+{% endif %}
           <!--Terminology Bindings heading in the fragment -->
           {% include StructureDefinition-{{[id]}}-tx{{[langsuffix]}}.xhtml %}
         
@@ -321,7 +398,7 @@
       </div>-->
 {% endunless %}
       <div id="all-summ">
-        <p>{{site.data.stringsBase['{{[lang]}}']['Derived'] | replace: "%ARTIFACT%", sdlink}}</p>
+        <p>{{site.data.stringsBase['{{[lang]}}']['Derive'] | replace: "%ARTIFACT%", sdlink}}</p>
         <div id="all-summ-inner">
           {% include StructureDefinition-{{[id]}}-summary-all{{[langsuffix]}}.xhtml %}
         </div>
@@ -329,7 +406,7 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>{{site.data.stringsBase['{{[lang]}}']['OtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a>{% unless modelType == 'Logical Model' %}, <a href="../{{[type]}}-{{[id]}}.sch">{{site.data.stringsBase['{{[lang]}}']['Schematron']}}</a>
+  <p>{{site.data.stringsBase['{{[lang]}}']['OtherReps']}} <a href="../{{[type]}}-{{[id]}}.csv">{{site.data.stringsBase['{{[lang]}}']['CSV']}}</a>, <a href="../{{[type]}}-{{[id]}}.xlsx">{{site.data.stringsBase['{{[lang]}}']['Excel']}}</a>{% unless modelType == site.data.stringsBase['{{[lang]}}']['LogicalModel'] %}, <a href="../{{[type]}}-{{[id]}}.sch">{{site.data.stringsBase['{{[lang]}}']['Schematron']}}</a>
 {% endunless %} 
   </p>
 
